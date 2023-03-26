@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+/* CSS VARIABLES */
+
+:root {
+ --mainWhite: #fff;
+ --offWhite: #f7f7f7f6;
+  --primaryColor: hsla(0, 0%, 97%, 0.315);
+	--secondaryColor: hsla(0, 0%, 100%, 0.726);
+	--primaryBlue: rgb(2, 232, 248);
+  --primaryDarkBlue: #0d6eec;
+  --mainBackground: #8b0abe;
+	--buttonBorderColor: #8e44ad;
+  --formWidth: 400px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainSpacing: 0.2rem;
+  --mainBorderRadius: 0.25rem;
+}
+
+
+/* GLOBAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--mainBackground);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 2rem 0;
+	width: 80%;
+}
+
+button {
+	border-radius: 4px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 10px;
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+/* UTILITY CLASSES */
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: unset;
+}
+
+/* Builder container */
+
+.builder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.builder-container h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--lightShadow);
+  background-color: var(--secondaryColor);
+  border-bottom: 2px solid var(--primaryBlue);
+  padding: 0.5em;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+  min-width: 100%;
+  border-radius: var(--mainBorderRadius);
+}
+
+/* Builder controls */
+
+.builder-controls {
+	max-width: 40vw;
+	width: 100%;
+	min-height: 100px;
+	background-color: var(--primaryColor);
+	border-radius: var(--mainBorderRadius);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: var(--darkShadow);
+}
+
+.builder-controls > button {
+	background-color: var(--mainBackground);
+	border: 1px solid var(--primaryBlue);
+	width: 30%;
+	box-shadow: var(--lightShadow);
+}
+
+.builder-controls > button:hover {
+	background-color: var(--buttonBorderColor);
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 0.25rem;
+}
+
+/* FORM STYLES */
+
+.form {
+	padding: 30px 40px;
+	background-color: var(--offWhite);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 100%;
+	max-width: 100%;
+	border: 1px solid var(--primaryBlue);
+}
+
+.form input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 4%;
+	width: 92%;
+	margin: 1rem 0;
+}
+
+.form fieldset {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 1rem 0 2rem;
+}
+
+.form fieldset label {
+	margin: 0 3rem 0 0.5rem;
+}
+
+.form fieldset input {
+	flex: 0;
+	margin-left: -1rem;
+	padding: unset;
+	margin: unset;
+}
+
+.form input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form select {
+	padding: 0.25rem;
+	margin-left: 5px;
+}
+
+.form button {
+	background-color: var(--mainBackground);
+	border: 2px solid var(--buttonBorderColor);
+	display: block;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.form button:hover {
+	background-color: var(--buttonBorderColor);
+}
+
+.form button.danger {
+	background-color: red;
+	border: 2px solid red;
+}
+
+.form button.danger:hover {
+	background-color: rgb(190, 20, 20);
+	border: 2px solid rgb(190, 20, 20);
+}
+
+
+
+/* Overview */
+
+.builder-overview {
+	width: 100%;
+	min-height: 100px;
+	background-color: var(--primaryColor);
+	border-radius: var(--mainBorderRadius);
+	box-shadow: var(--darkShadow);
+}
+
+.overview {
+	padding: 3em 2em;
+}
+
+.overview ul {
+	border-radius: var(--mainBorderRadius);
+}	
+
+.overview > ul ~ ul {
+	margin-top: 3rem;
+}
+
+.overview ul ul {
+  margin: 2em 0 1em;
+  padding-left: 5%;
+}
+
+.overview li {
+  padding: 1em 1em;
+  background-color:#dbd5dd63;
+	box-shadow: var(--lightShadow);
+}
+
+.builder-overview span {
+	font-weight: bold;
+	margin: 0 1em;
+}
+
+.builder-overview button {
+	background-color: var(--primaryDarkBlue);
+	border: 1px solid var(--primaryBlue);
+	padding: 0.25em 0.5em;
+}
+
+.builder-overview button:hover {
+	background-color: rgb(24, 24, 209);
+}
+
+.builder-overview button:disabled {
+	background-color: gray;
+	border: 1px solid darkgray;
+}
+
+
+/* Result */
+
+.builder-result {
+	max-width: 40vw;
+	border-radius: 4px;
+	width: 100%;
+	box-shadow: var(--darkShadow);
+}
+
+.result {
+	height: 100%;
+}
+
+.result label {
+	display: flex;
+	gap: 1em;
+}
+
+.builder-result .form {
+	width: unset;
+	height: 100%;
+}
+
+@media (max-width: 1410px) {
+
+	.overview {
+		padding: 2em 1em;
+		font-size: 0.95rem;
+	}
+	
+	.overview > ul ~ ul {
+		margin-top: 2rem;
+	}
+	
+	.overview ul ul {
+		margin: 1.5em 0 0.5em;
+		padding-left: 5%;
+	}
+	
+	.overview li {
+		padding: 0.75em 0.75em;
+	}
+	
+	.builder-overview span {
+		margin: 0 0.75em;
+	}
+	
+	
+	.builder-overview button {
+		padding: 0.25em 0.5em;
+		font-size: 0.8rem;
+	}
+	
+	
+}
+
+@media (max-width: 1060px) {
+
+
+	
+	.overview ul ul > li {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr 1fr;
+		gap: 1em;
+	}
+
+	.overview ul ul > li > button {
+		grid-column: 2 / 4;
+	}
+	
+}
+
+@media (max-width: 560px) {
+
+	.form {
+		padding: 5% 2%;
+	}
+
+	.builder-controls {
+		max-width: 80vw;
+	}
+
+	.builder-result {
+		max-width: 80vw;
+	}
+
+	.overview ul > li {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 1em;
+	}
+
+	.overview ul > li button {
+		grid-column: 1 / 3;
+	}
+	
+}
+
+@media (max-width: 450px) {
+
+	.overview ul > li {
+		gap: 0.5em;
+	}
+
+	.overview {
+		padding: unset;
+		font-size: 0.6rem;
+	}
+	
+	.overview > ul ~ ul {
+		margin-top: 1em;
+	}
+	
+	.overview ul ul {
+		margin: 1em 0;
+		padding-left: 2%;
+	}
+	
+	.overview li {
+		padding: 2em unset;
+	}
+	
+	.builder-overview span {
+		margin: unset;
+	}
+	
+	
+	.builder-overview button {
+		padding: 0.25em unset;
+		font-size: 0.6rem;
+	}
+
+}

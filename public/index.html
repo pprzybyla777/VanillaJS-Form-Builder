@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="builder-container">
+      <h1>Builder controls</h1>
+      <div class="builder-controls">
+
+        <form id="form-main" class="form hide">
+          <div class="form-control">
+            <label for="question">Question:</label>
+            <input type="text" placeholder="type in your question" id="question" required />
+          </div>
+          <div class="form-control">
+            <label for="select-type">Type:</label>
+            <select name="types" id="select-type" required>
+              <option value="binary">Yes / No</option>
+              <option value="text">Text</option>
+              <option value="numeric">Number</option>
+            </select>
+          </div>
+
+          <button type="submit">Add Input</button>
+          <button type="reset" id="mainCancelBtn" class="danger">Cancel</button>
+
+        </form>
+
+
+
+        <form id="form-sub" class="form hide">
+
+          <div class="form-control">
+            <label for="question">Question:</label>
+            <input type="text" placeholder="Are you a student?" id="question" required />
+          </div>
+
+          <div class="form-control">
+            <label for="select-type">Type:</label>
+            <select name="types" id="select-type" required>
+              <option value="binary">Yes / No</option>
+              <option value="text">Text</option>
+              <option value="numeric">Number</option>
+            </select>
+          </div>
+
+          <button type="submit">Add Subinput</button>
+          <button type="reset" id="subCancelBtn" class="danger">Cancel</button>
+
+        </form>
+
+        <button id="add-input">Add Input</button>
+
+      </div>
+
+      <h1>Builder Overview</h1>
+
+      <div class="builder-overview">
+        <div class="overview" id="overview">
+
+        </div>
+      </div>
+
+      <h1>Result</h1>
+
+      <div class="builder-result">
+        <div class="result" id="result">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
