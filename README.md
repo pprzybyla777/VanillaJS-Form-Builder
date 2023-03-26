@@ -1,5 +1,5 @@
 # zadanie-rekrutacyjne-frontend
-Autor: Piotr Przybyła
+Autor: Piotr Przybyła \
 Gmail: piotrprz03@gmail.com
 
 ## How to build
