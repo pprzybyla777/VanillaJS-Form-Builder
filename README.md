@@ -6,7 +6,7 @@ The goal of this project is to build a simple form builder that will generate a 
 
 ## Specification
 
-[Form Builder](./formbuilder.png)
+[Form Builder](./formbuilder.pdf)
 
 The form builder will have 3 types of form inputs. Each of these can also have sub-inputs which will only show when the parent input is answered a certain way. 
 
